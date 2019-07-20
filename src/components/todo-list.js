@@ -6,8 +6,13 @@ import TodoListItem from './todo-list-item';
 
 const TodoList = () => (
   <ul>
-    <li>{ <TodoListItem /> }</li>
-    <li>{ <TodoListItem /> }</li>
+    <li>{ <TodoListItem label="Drink Coffee" /> }</li>
+    <li>{ <TodoListItem label="Build React App" important /> }</li>
+    <li>{ <TodoListItem label="Create Awesome features" /> }</li>
+    <li>{ <TodoListItem label="Drink Tea" /> }</li>
+    <li>{ <TodoListItem label="Go Shopping" /> }</li>
+    <li>{ <TodoListItem label="Read books" important /> }</li>
+    <li>{ <TodoListItem label="Watch movies" /> }</li>
   </ul>
 );
 
