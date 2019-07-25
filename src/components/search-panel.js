@@ -1,6 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/jsx-filename-extension */
-
 import React from 'react';
 
 
@@ -9,6 +6,7 @@ const SearchPanel = () => {
   const searchStyle = {
     fontSize: '20px',
   };
+  
   return (
     <input
       placeholder={searchText}

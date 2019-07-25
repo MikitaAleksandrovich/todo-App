@@ -1,5 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/jsx-filename-extension */
+
 
 import React from 'react';
 import TodoListItem from './todo-list-item';
@@ -7,7 +6,10 @@ import TodoListItem from './todo-list-item';
 const TodoList = ({ todos }) => {
   const elements = todos.map(item => (
     <li>
-      <TodoListItem {...item} />
+      <TodoListItem 
+        label = {item.label}
+        important = {item.important}
+      />
     </li>
   ));
 
@@ -18,5 +20,6 @@ const TodoList = ({ todos }) => {
     </ul>
   );
 };
+
 
 export default TodoList;
