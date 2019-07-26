@@ -1,7 +1,9 @@
 import React from 'react';
 
+import './app-header.css';
+
 const AppHeader = () => {
-  return <h1>My Todo App</h1>
+  return <h1 className="app-header">My Todo App</h1>
 };
 
 
