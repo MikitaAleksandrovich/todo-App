@@ -3,7 +3,7 @@ import React from 'react';
 import TodoListItem from '../todo-list-item';
 import './todo-list.css';
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, onDeleted }) => {
 
   const elements = todos.map(item => {
 
@@ -14,6 +14,7 @@ const TodoList = ({ todos }) => {
       <TodoListItem 
         label = {item.label}
         important = {item.important}
+        onDeleted = { () => onDeleted(id)}
       />
     </li>
     );

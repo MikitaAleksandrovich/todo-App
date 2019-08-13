@@ -16,7 +16,7 @@ const App = () => {
     { label: 'Make dinner', important: false, id: 5 },
     { label: 'Go sleep', important: false, id: 6 }
   ];
-
+ 
   return (
     <div className="todo-app">
       <AppHeader toDo={1} done={3} />
@@ -25,7 +25,10 @@ const App = () => {
         <ItemStatusFilter />
       </div>
 
-      <TodoList todos={todoData} />
+      <TodoList 
+        todos={todoData} 
+        onDeleted={ (id) => console.log('del', id)}
+      />
     </div>
   );
 };
