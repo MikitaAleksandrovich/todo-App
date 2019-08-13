@@ -24,8 +24,6 @@ export default class App extends Component {
 
       const itemDeletedIndex = todoData.findIndex((el) => el.id === id);
 
-      todoData.splice(itemDeletedIndex, 1);
-
       const beforeDeltedItem = todoData.slice(0, itemDeletedIndex);
       const afterDeletedItem = todoData.slice(itemDeletedIndex + 1);
 
