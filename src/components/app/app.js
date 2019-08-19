@@ -21,7 +21,7 @@ export default class App extends Component {
       this.createTodoItem('Go sleep')
     ],
     searchedItem: '',
-    filter: '' // can be active, all, done
+    filter: 'all' // can be active, all, done
   }
 
   createTodoItem(label) {
