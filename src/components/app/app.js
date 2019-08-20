@@ -39,6 +39,12 @@ export default class App extends Component {
     })
   };
 
+  onFilterChange = (filter) => {
+    this.setState({
+      filter: filter
+    })
+  };
+
   
   deleteItem = (id) => {
     this.setState(({ todoData }) => {
@@ -141,7 +147,10 @@ export default class App extends Component {
         <AppHeader toDo={todoCount} done={doneCount} />
         <div className="top-panel d-flex">
           <SearchPanel onSearchedItem={ this.onSearchedItem }/>
-          <ItemStatusFilter />
+          <ItemStatusFilter 
+            filter={ filter }
+            onFilterChange={ this.onFilterChange }
+            />
         </div>
   
         <TodoList 
@@ -151,7 +160,7 @@ export default class App extends Component {
           onToggleDone={ this.onToggleDone }
         />
 
-        <ItemAddForm onItemAdded={this.addItem} />
+        <ItemAddForm onItemAdded={ this.addItem } />
         
       </div>
     );
